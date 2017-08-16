@@ -3,24 +3,24 @@ environment:
 
   # Ensure MinGW works, but we need to download the 32-bit MinGW compiler from a
   # custom location.
-  - TARGET: i686-pc-windows-gnu
-    MINGW_URL: https://s3.amazonaws.com/rust-lang-ci
-    MINGW_ARCHIVE: i686-4.9.2-release-win32-dwarf-rt_v4-rev4.7z
-    MINGW_DIR: mingw32
-  - TARGET: x86_64-pc-windows-gnu
-    MSYS_BITS: 64
+  # - TARGET: i686-pc-windows-gnu
+  #   MINGW_URL: https://s3.amazonaws.com/rust-lang-ci
+  #   MINGW_ARCHIVE: i686-4.9.2-release-win32-dwarf-rt_v4-rev4.7z
+  #   MINGW_DIR: mingw32
+  # - TARGET: x86_64-pc-windows-gnu
+  #   MSYS_BITS: 64
 
-  # Ensure vanilla builds work
-  - TARGET: i686-pc-windows-msvc
-  - TARGET: x86_64-pc-windows-msvc
+  # # Ensure vanilla builds work
+  # - TARGET: i686-pc-windows-msvc
+  # - TARGET: x86_64-pc-windows-msvc
 
-  # Pin to specific VS versions to ensure the build works
-  - TARGET: x86_64-pc-windows-msvc
-    ARCH: amd64
-    VS: C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat
-  - TARGET: x86_64-pc-windows-msvc
-    ARCH: amd64
-    VS: C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat
+  # # Pin to specific VS versions to ensure the build works
+  # - TARGET: x86_64-pc-windows-msvc
+  #   ARCH: amd64
+  #   VS: C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat
+  # - TARGET: x86_64-pc-windows-msvc
+  #   ARCH: amd64
+  #   VS: C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat
 
   # Ensure getting libcurl from vcpkg works
   - TARGET: x86_64-pc-windows-msvc
